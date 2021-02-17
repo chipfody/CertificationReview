@@ -16,3 +16,22 @@ class Person {
         System.out.println(person.name);
     }
 }
+class TestStrings {
+    static String addString (String a) {
+        a = a + "addOn";
+        return a;
+    }
+
+    static StringBuilder addStringBuilder(StringBuilder b) {
+        b = b.append("String");
+        return b;
+    }
+    public static void main(String[] args) {
+        String word = "word";
+        StringBuilder build = new StringBuilder("build");
+        String newWord = addString(word);
+        System.out.println(word);
+        System.out.println(newWord);
+        System.out.println(addStringBuilder(build));
+    }
+}
