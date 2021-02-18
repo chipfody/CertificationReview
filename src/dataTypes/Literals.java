@@ -1,5 +1,8 @@
 package dataTypes;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 public class Literals {
 }
 
@@ -22,8 +25,55 @@ class TwistInTaleNumberSystems {
         char char1 = 'a';
         System.out.println(char1);
         System.out.println(char1 + char1);
-        System.out.print(char1 - char1);
+        System.out.println(char1 - char1);
+
+        byte age1 = 10;
+        byte age2 = 20;
+        short sum = (short) (age1 + age2);
+
+        int a = 20;
+        int b = 10;
+//        ++a;
+//        b++;
+        System.out.println(++a);
+        System.out.println(b++);
+        System.out.println(b);
     }
 }
+
+class TwistInTaleLLogicalOperators {
+    public static void main (String args[]) {
+        int a = 10;
+        int b = 20;
+        int c = 40;
+        System.out.println("a = " + a + " b = " + b + " c = " + c);
+        System.out.println(a++ > 10 || ++b < 30);
+        System.out.println("a = " + a + " b = " + b + " c = " + c);
+        System.out.println(a > 90 && ++b < 30);
+        System.out.println("a = " + a + " b = " + b + " c = " + c);
+        System.out.println(!(c>20) && a == 10 );
+        System.out.println("a = " + a + " b = " + b + " c = " + c);
+        System.out.println(a >= 99 || a <= 33 && b == 10);
+        System.out.println("a = " + a + " b = " + b + " c = " + c);
+        System.out.println(a >= 99 && a <= 33 || b == 21);
+        System.out.println("a = " + a + " b = " + b + " c = " + c);
+
+    }
+}
+
+class Unbox {
+    public static void main(String[] args) {
+        ArrayList list = new ArrayList();
+        list.add(new Double(12.12D));
+        list.add(new Double(11.24D));
+        Double total = Double.valueOf(0.0D);
+        for (Iterator iterator = list.iterator(); iterator.hasNext(); ) {
+            Double d = (Double) iterator.next();
+            total = total.doubleValue() + d.doubleValue();
+        }
+        System.out.println(total);
+    }
+}
+
 
 

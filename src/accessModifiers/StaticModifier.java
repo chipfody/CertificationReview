@@ -39,3 +39,41 @@ class TestEmp {
     }
 }
 
+
+class Phone {
+    static boolean softKeyboard = true;
+}
+
+class TestPhone {
+    public static void main(String[] args) {
+        Phone.softKeyboard = false;
+        Phone p1 = new Phone();
+        Phone p2 = new Phone();
+        System.out.println(p1.softKeyboard);
+        System.out.println(p2.softKeyboard);
+        p1.softKeyboard = true;
+        System.out.println(p1.softKeyboard);
+        System.out.println(p2.softKeyboard);
+        System.out.println(Phone.softKeyboard);
+        Phone p3 = null;
+        System.out.println(p3.softKeyboard);
+    }
+}
+
+
+class Phone2 {
+    String phoneNumber = "123456789";
+    String setNumber () {
+        String phoneNumber = "987654321";;
+        return phoneNumber;
+    }
+}
+class TestPhone2 {
+    public static void main(String[] args) {
+        Phone2 p1 = new Phone2();
+        String methodCall = p1.setNumber();
+
+        System.out.println (p1.phoneNumber);
+        System.out.println(methodCall);
+    }
+}
