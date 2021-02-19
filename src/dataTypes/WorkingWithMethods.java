@@ -119,3 +119,33 @@ class Test {
                 + " : " + person2.getName());
     }
 }
+
+class UnaryOperators {
+    public static void main(String[] args) {
+        int x = 3;
+        int y = ++x * 5 / x-- + --x;
+        System.out.println("x is " + x);
+        System.out.println("y is " + y);
+
+        long x1 = 5;
+        long y1 = (x1 = 3);
+        System.out.println(x1); // Outputs 3
+        System.out.println(y1); // Also, outputs 3
+
+        int z = 6;
+        boolean y2 = (z >= 6) || (++z <= 7);
+        System.out.println(z);
+        System.out.println(y2);
+    }
+}
+
+class Loops {
+    public static void main(String[] args) {
+        int x;
+        long y = 10;
+        for(y = 0, x = 4; x < 5 && y < 10; x++, y++) {
+            //System.out.print(x + " ");
+        }
+        System.out.print(x + " ");
+    }
+}
