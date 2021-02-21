@@ -35,3 +35,49 @@ class TestStrings {
         System.out.println(addStringBuilder(build));
     }
 }
+
+class StringBuilderTest {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("start");
+        sb.append("+middle"); // sb = "start+middle"
+        StringBuilder same = new StringBuilder(sb.append("+end")); // "start+middle+end"
+        System.out.println(sb == same);
+        System.out.println(sb);
+        StringBuilder same2 = new StringBuilder(sb.append("+end"));
+        System.out.println(same2
+        );
+    }
+}
+
+class StringBuilderTest2 {
+    public static void main(String[] args) {
+        StringBuilder a = new StringBuilder("abc");
+        StringBuilder b = a.append("de");
+        b = b.append("f").append("g");
+        System.out.println("a= " + a);
+        System.out.println("b= " + b);
+    }
+}
+
+class StringBuilderTest3 {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("animals");
+        String sub = sb.substring(sb.indexOf("a"), sb.indexOf("al"));
+        int len = sb.length();
+        char ch = sb.charAt(6);
+        System.out.println(sub + " " + len + " " + ch);
+        System.out.println(sb);
+    }
+}
+
+class Tiger {
+    String name;
+public static void main(String[] args) {
+        Tiger t1 = new Tiger();
+        Tiger t2 = new Tiger();
+        Tiger t3 = t1;
+        System.out.println(t1 == t3); // true
+        System.out.println(t1 == t2); // false
+        System.out.println(t1.equals(t2)); // false
+         }
+}
