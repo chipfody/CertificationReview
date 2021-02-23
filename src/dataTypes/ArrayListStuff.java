@@ -64,6 +64,6 @@ public class ArrayListStuff {
         System.out.println(stringArray.length);
         for (String s : stringArray)
             System.out.println(s);
-        stringArray.
+
     }
 }
